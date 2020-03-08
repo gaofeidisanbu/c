@@ -57,12 +57,28 @@ void reference() {
     int &b = a;
     reference1(b);
     printf("swap2 hello world13  b = %d \n", b);
+};
 
-}
+class Box
+{
+   public:
+      int length;   // 盒子的长度
+};
 
+void objectTest() {
+    Box Box1;        // 声明 Box1，类型为 Box
+    Box Box2;        // 声明 Box2，类型为 Box
+    double length = 1;     // 用于存储体积
+    Box1.length = length;
+    Box2.length = 3;
+    Box2 = Box1;
+    printf("hello world13 Box1 = %p Box2 = %p", &Box1, &Box2);
+    printf("hello world13 Box1 = %d Box2 = %d", Box1.length, Box2.length);
+};
 
 int main() {
 //    assign();
-    reference();
+    // reference();
+    objectTest();
    return 0;
 }
